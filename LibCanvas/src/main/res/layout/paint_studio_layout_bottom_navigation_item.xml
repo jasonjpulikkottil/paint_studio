@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/paint_studio_main_bottom_bar_height"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingTop="5dp"
+    tools:ignore="UseCompoundDrawables">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/paint_studio_bottom_navigation_icon_size"
+        android:layout_height="@dimen/paint_studio_bottom_navigation_icon_size"
+        android:contentDescription="@string/bottom_navigation_item"
+        android:tint="@android:color/white"/>
+
+    <Space style="@style/paint_studioToolHorizontalSpace" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"/>
+</LinearLayout>

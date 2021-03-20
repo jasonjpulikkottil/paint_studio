@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/paint_studio_layout_top_bar"
+        android:id="@+id/paint_studio_intro_possibilities_topbar"/>
+
+    <LinearLayout
+        android:id="@+id/paint_studio_intro_possibilities_bottom_bar_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/paint_studio_main_bottom_bar_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <include android:id="@+id/paint_studio_intro_possibilities_bottom_bar"
+            layout="@layout/paint_studio_layout_bottom_navigation" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:background="@color/paint_studio_main_drawing_surface_background"
+        android:layout_above="@id/paint_studio_intro_possibilities_bottom_bar_ll"
+        android:layout_below="@id/paint_studio_intro_possibilities_topbar">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/paint_studio_checkeredbg_repeat"
+            android:orientation="horizontal"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/paint_studio_intro_possibilities_textview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:background="#d20097a7"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/paint_studio_welcome_margin_side"
+        android:paddingStart="@dimen/paint_studio_welcome_margin_side"
+        android:paddingTop="@dimen/paint_studio_welcome_margin_top_possibilities"
+        android:layout_below="@id/paint_studio_intro_possibilities_topbar"
+        android:layout_above="@id/paint_studio_intro_possibilities_bottom_bar_ll"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/paint_studio_intro_possibilities_head"
+            style="@style/paint_studioWelcomeHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="2"
+            android:text="@string/more_possibilities"/>
+
+        <TextView
+            android:id="@+id/paint_studio_intro_possibilities_text"
+            style="@style/paint_studioWelcomeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paint_studio_intro_possibilities_head"
+            android:layout_marginTop="@dimen/paint_studio_welcome_margin_top_text"
+            android:text="@string/intro_possibilities_text"/>
+
+    </RelativeLayout>
+</RelativeLayout>

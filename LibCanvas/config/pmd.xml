@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         name="Catroid PMD ruleset"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd" >
+    <description >PMD Ruleset for PaintStudio</description >
+
+    <rule ref="rulesets/java/android.xml" />
+
+    <rule ref="rulesets/java/basic.xml" />
+
+    <rule ref="rulesets/java/braces.xml" />
+
+    <rule ref="rulesets/java/controversial.xml" >
+        <exclude name="AssignmentInOperand" />
+        <exclude name="AtLeastOneConstructor" />
+        <exclude name="AvoidFinalLocalVariable" />
+        <exclude name="AvoidPrefixingMethodParameters" />
+        <exclude name="AvoidLiteralsInIfCondition" />
+        <exclude name="CallSuperInConstructor" />
+        <exclude name="DataflowAnomalyAnalysis" />
+        <exclude name="NullAssignment" />
+        <exclude name="OnlyOneReturn" />
+        <exclude name="UseConcurrentHashMap" />
+        <exclude name="UseObjectForClearerAPI" />
+        <exclude name="AvoidUsingShortType" />
+        <exclude name="DefaultPackage" />
+        <exclude name="UnnecessaryConstructor" />
+        <exclude name="AvoidUsingVolatile" />
+    </rule >
+
+    <rule ref="rulesets/java/empty.xml" >
+        <exclude name="EmptyCatchBlock" />
+    </rule >
+
+    <rule ref="rulesets/java/logging-java.xml" >
+        <exclude name="GuardLogStatementJavaUtil" />
+    </rule>
+
+    <rule ref="rulesets/java/strings.xml" >
+        <exclude name="AvoidDuplicateLiterals" />
+    </rule >
+
+    <rule ref="rulesets/java/sunsecure.xml" />
+
+    <rule ref="rulesets/java/unnecessary.xml" >
+        <exclude name="UselessParentheses" />
+    </rule >
+
+    <rule ref="rulesets/java/unusedcode.xml" />
+
+    <rule ref="rulesets/java/junit.xml">
+        <exclude name="JUnitTestContainsTooManyAsserts" />
+        <exclude name="JUnitAssertionsShouldIncludeMessage" />
+        <exclude name="JUnitTestsShouldIncludeAssert" />
+    </rule>
+</ruleset >

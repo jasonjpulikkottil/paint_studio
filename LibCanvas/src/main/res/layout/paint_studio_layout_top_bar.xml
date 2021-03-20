@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+
+ -->
+
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paint_studio_layout_top_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/activity_paint_studio_main">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/paint_studio_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/paint_studio_app_name">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end">
+
+            <ImageButton
+                android:id="@+id/paint_studio_btn_top_undo"
+                style="?actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/button_undo"
+                app:srcCompat="@drawable/ic_paint_studio_undo_selector"
+                android:tint="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/paint_studio_btn_top_redo"
+                style="?actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/button_redo"
+                app:srcCompat="@drawable/ic_paint_studio_redo_selector"
+                android:tint="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/paint_studio_btn_top_checkmark"
+                style="?actionButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/button_checkmark"
+                app:srcCompat="@drawable/ic_paint_studio_checkmark"
+                android:tint="@android:color/white"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+</com.google.android.material.appbar.AppBarLayout>

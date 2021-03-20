@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paint_studio_slide_intro_tools_selection"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/paint_studio_welcome_margin_top">
+
+    <ImageView
+        android:id="@+id/paint_studio_tools_info_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/paint_studio_textview_intro_tools_header"
+        tools:src="@drawable/ic_paint_studio_dialog_warning"
+        android:contentDescription="@string/paint_studio_tool_icon_description" />
+
+    <TextView
+        android:id="@+id/paint_studio_tools_info_description"
+        style="@style/paint_studioWelcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paint_studio_textview_intro_tools_header"
+        android:layout_marginTop="@dimen/paint_studio_welcome_margin_top_possibilities"
+        android:layout_marginStart="@dimen/paint_studio_welcome_margin_side"
+        android:layout_marginEnd="@dimen/paint_studio_welcome_margin_side"
+        android:text="@string/intro_bottom_navigation_tools_description"
+        tools:text="tool_description" />
+
+    <TextView
+        android:id="@+id/paint_studio_textview_intro_tools_header"
+        style="@style/paint_studioWelcomeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/paint_studio_welcome_margin_side"
+        android:layout_marginEnd="@dimen/paint_studio_welcome_margin_side"
+        android:text="@string/dialog_tools_title"/>
+
+    <TextView
+        android:id="@+id/paint_studio_textview_intro_tools_text"
+        style="@style/paint_studioWelcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/paint_studio_intro_bottom_bar"
+        android:layout_centerHorizontal="true"
+        android:text="@string/intro_tool_more_information" />
+
+    <include
+        android:id="@+id/paint_studio_intro_bottom_bar"
+        layout="@layout/paint_studio_layout_bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+

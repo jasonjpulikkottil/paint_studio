@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="paint_studioTitleTextStyle">
+    <item name="android:textColor">@color/paint_studio_colorAccent</item>
+    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+    </style>
+
+    <style name="paint_studioAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowTitleStyle">@style/paint_studioTitleTextStyle</item>
+        <item name="android:textColorLink">@color/paint_studio_text_color_link</item>
+        <item name="colorAccent">@color/paint_studio_colorAccent</item>
+    </style>
+
+    <style name="paint_studioProgressDialog" parent="paint_studioAlertDialog">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowMinWidthMajor">0%</item>
+        <item name="android:windowMinWidthMinor">0%</item>
+    </style>
+
+    <style name="paint_studioSplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/paint_studio_splash</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="paint_studioTheme" parent="paint_studioTheme.Base">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+    </style>
+
+    <style name="paint_studioSelectableButton" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="background">@drawable/paint_studio_selectable_button_bg</item>
+    </style>
+
+    <style name="OptionsViewTextFieldTheme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="hintEnabled">false</item>
+    </style>
+    <style name="Theme.Light.ActionBar" parent="@android:style/Theme.Light">
+        <item name="windowNoTitle">false</item>
+        <item name="windowActionBar">true</item>
+    </style>
+
+    <style name="paint_studioTheme.Base" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+        <item name="android:windowBackground">@color/paint_studio_colorPrimary</item>
+        <item name="dialogTheme">@style/paint_studioAlertDialog</item>
+        <item name="colorPrimary">@color/paint_studio_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/paint_studio_colorPrimaryDark</item>
+        <item name="colorAccent">@color/paint_studio_colorAccent</item>
+        <item name="actionBarStyle">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="colorSurface">@color/design_default_color_surface</item>
+        <item name="seekBarStyle">@style/CustomSeekBarStyle</item>
+        <item name="editTextStyle">@style/CustomEditTextStyle</item>
+        <item name="spinnerStyle">@style/CustomSpinnerStyle</item>
+        <item name="android:textViewStyle">@style/CustomTextViewStyle</item>
+        <item name="android:buttonStyleToggle">@style/CustomToggleButtonStyle</item>
+        <item name="buttonStyle">@style/CustomButtonStyle</item>
+        <item name="colorControlNormal">@android:color/black</item>
+        <item name="colorControlActivated">?colorAccent</item>
+        <item name="bottomNavigationStyle">@style/CustomBottomNavigationViewStyle</item>
+        <item name="colorButtonNormal">@color/paint_studio_lighter_gray</item>
+    </style>
+
+    <style name="CustomBottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="backgroundTint">@color/paint_studio_colorPrimary</item>
+    </style>
+
+    <style name="CustomToggleButtonStyle" parent="android:Widget.Material.Light.Button.Toggle">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="background">@drawable/btn_toggle_material_background</item>
+    </style>
+
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="backgroundTint">@color/paint_studio_lighter_gray</item>
+    </style>
+
+    <style name="CustomTextViewStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="CustomSpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="backgroundTint">@android:color/darker_gray</item>
+        <item name="android:popupBackground">@android:color/white</item>
+    </style>
+
+    <style name="CustomEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="backgroundTint">?colorAccent</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+    </style>
+
+    <style name="CustomSeekBarStyle" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressBackgroundTint">@color/paint_studio_color_picker_gray</item>
+        <item name="android:progressTint">?attr/colorAccent</item>
+        <item name="colorControlActivated">?attr/colorAccent</item>
+    </style>
+
+    <style name="paint_studioHighlightColorTheme" parent="paint_studioTheme">
+        <item name="colorControlHighlight">@color/paint_studio_main_bottom_bar_selected</item>
+    </style>
+
+    <style name="paint_studioDividerBase">
+        <item name="background">@color/paint_studio_main_separator_color</item>
+    </style>
+
+    <style name="BottomNavigationViewLabel" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="paint_studioToolSelectionButton" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="background">?selectableItemBackgroundBorderless</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="paint_studioToolSelectionButtonImageView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="tint">@android:color/black</item>
+    </style>
+
+    <style name="paint_studioToolSelectionButtonTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="paint_studioToolTitle" parent="paint_studioToolSubtitle">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="paint_studioToolSubtitle">
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/paint_studio_colorAccent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="paint_studioToolSectionDivider" parent="paint_studioDividerBase">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="paint_studioToolSection">
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="paint_studioToolHorizontalSpace">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="paint_studioWelcomeHeader" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">@color/paint_studio_color_picker_white</item>
+        <item name="fontFamily">sans-serif</item> <!--sans-serif is robot-->
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="paint_studioWelcomeText" parent="@android:style/TextAppearance.DeviceDefault.Medium">
+        <item name="android:textColor">@color/paint_studio_color_picker_white</item>
+        <item name="fontFamily">sans-serif</item> <!--sans-serif is robot-->
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="paint_studioWelcomeActivityTheme" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/paint_studio_colorPrimary</item>
+        <item name="android:colorBackground">@color/paint_studio_colorPrimary</item>
+        <item name="android:windowBackground">@color/paint_studio_colorPrimary</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="actionBarStyle">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="WebViewLoadingCircle" parent="Theme.AppCompat.Dialog">
+        <item name="alertDialogStyle">@style/WebViewLoadingCircleStyle</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:textColorPrimary">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="WebViewLoadingCircleStyle">
+        <item name="android:bottomBright">@android:color/transparent</item>
+        <item name="android:bottomDark">@android:color/transparent</item>
+        <item name="android:bottomMedium">@android:color/transparent</item>
+        <item name="android:centerBright">@android:color/transparent</item>
+        <item name="android:centerDark">@android:color/transparent</item>
+        <item name="android:centerMedium">@android:color/transparent</item>
+        <item name="android:fullBright">@android:color/transparent</item>
+        <item name="android:fullDark">@android:color/transparent</item>
+        <item name="android:topBright">@android:color/transparent</item>
+        <item name="android:topDark">@android:color/transparent</item>
+    </style>
+
+    <style name="paint_studioSpinnerTheme" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="background">@drawable/ic_paint_studio_dropdown_arrow_modified</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+</resources>

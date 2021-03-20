@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/paint_studioToolSubtitle"
+            android:text="@string/transform_tool_auto_crop_text" />
+
+        <View style="@style/paint_studioToolSectionDivider"/>
+
+        <LinearLayout style="@style/paint_studioToolSection">
+
+            <Button
+                android:id="@+id/paint_studio_transform_auto_crop_btn"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/transform_tool_auto_crop_text"
+                android:drawableTop="@drawable/ic_paint_studio_tool_resize_adjust"
+                android:text="@string/transform_auto_crop_text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?attr/colorAccent"
+                android:textSize="14sp" />
+
+            <Space style="@style/paint_studioToolHorizontalSpace" />
+
+            <TextView
+                android:id="@+id/paint_studio_transform_width_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/paint_studio_transform_width_value"
+                android:text="@string/transform_width_text"
+                android:textColor="?attr/colorAccent"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/paint_studio_transform_width_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textAlignment="textEnd"
+                android:textColor="?attr/colorAccent"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="100"
+                android:importantForAutofill="no" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pixel"
+                android:textColor="?attr/colorAccent"
+                android:textSize="14sp" />
+
+            <Space style="@style/paint_studioToolHorizontalSpace"
+                android:layout_width="16dp" />
+
+            <TextView
+                android:id="@+id/paint_studio_transform_height_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/paint_studio_transform_height_value"
+                android:text="@string/transform_height_text"
+                android:textColor="?attr/colorAccent"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/paint_studio_transform_height_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textAlignment="textEnd"
+                android:textColor="?attr/colorAccent"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="100"
+                android:importantForAutofill="no" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pixel"
+                android:textColor="?attr/colorAccent"
+                android:textSize="14sp" />
+
+            <Space style="@style/paint_studioToolHorizontalSpace" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/paint_studioToolSubtitle"
+            android:text="@string/transform_tool_resize_text" />
+
+        <View style="@style/paint_studioToolSectionDivider"/>
+
+        <LinearLayout style="@style/paint_studioToolSection">
+            <SeekBar
+                android:id="@+id/paint_studio_transform_resize_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="100"
+                android:minHeight="30dip" />
+
+            <TextView
+                android:id="@+id/paint_studio_transform_resize_percentage_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:saveEnabled="false"
+                android:textColor="?attr/colorAccent"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:text="100"
+                tools:ignore="HardCodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorAccent"
+                android:text="%"
+                tools:ignore="HardcodedText"/>
+
+            <Space style="@style/paint_studioToolHorizontalSpace"
+                android:layout_width="16dp" />
+
+            <Button
+                android:id="@+id/paint_studio_transform_apply_resize_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="@string/button_apply"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/paint_studioToolSubtitle"
+            android:text="@string/button_transform" />
+
+        <View style="@style/paint_studioToolSectionDivider"/>
+
+        <LinearLayout style="@style/paint_studioToolSection">
+            <ImageButton
+                android:id="@+id/paint_studio_transform_rotate_left_btn"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_paint_studio_tool_rotate_left"
+                android:theme="@style/paint_studioHighlightColorTheme"
+                android:contentDescription="@string/transform_tool_rotate_left" />
+
+            <ImageButton
+                android:id="@+id/paint_studio_transform_rotate_right_btn"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_paint_studio_rotate_right"
+                android:theme="@style/paint_studioHighlightColorTheme"
+                android:contentDescription="@string/transform_tool_rotate_right" />
+
+            <ImageButton
+                android:id="@+id/paint_studio_transform_flip_vertical_btn"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_paint_studio_tool_flip_vertical"
+                android:theme="@style/paint_studioHighlightColorTheme"
+                android:contentDescription="@string/transform_tool_flip_vertical" />
+
+            <ImageButton
+                android:id="@+id/paint_studio_transform_flip_horizontal_btn"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_paint_studio_tool_flip_horizontal"
+                android:theme="@style/paint_studioHighlightColorTheme"
+                android:contentDescription="@string/transform_tool_flip_horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

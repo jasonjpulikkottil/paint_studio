@@ -1,0 +1,12 @@
+<!--
+
+ -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true"
+          android:drawable="@color/paint_studio_main_bottom_bar_selected"/>
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="?attr/colorControlHighlight" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<resources>
+    <!-- paint_studio font chooser options -->
+    <string-array name="paint_studio_main_text_tool_fonts">
+        <item>@string/text_tool_dialog_font_sans_serif</item>
+        <item>@string/text_tool_dialog_font_monospace</item>
+        <item>@string/text_tool_dialog_font_serif</item>
+        <item>@string/text_tool_dialog_font_dubai</item>
+        <item>@string/text_tool_dialog_font_arabic_stc</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="244dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="27dp">
+
+        <TextView
+            android:id="@+id/paint_studio_save_info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/dialog_save_image_name"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/paint_studio_image_name_save_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:layout_marginTop="19dp"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textSize="14sp"
+            tools:ignore="LabelFor" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="244dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="27dp">
+
+        <TextView
+            android:id="@+id/paint_studio_image_format_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@string/dialog_save_image_format"
+            android:textSize="12sp" />
+
+        <Spinner
+            android:id="@+id/paint_studio_save_dialog_spinner"
+            style="@style/paint_studioSpinnerTheme"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:textSize="14sp"
+            android:theme="@style/CustomTextViewStyle"
+            android:spinnerMode="dropdown" />
+
+        <ImageButton
+            android:id="@+id/paint_studio_btn_save_info"
+            style="@style/paint_studioSelectableButton"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="11dp"
+            android:layout_toEndOf="@+id/paint_studio_save_dialog_spinner"
+            android:contentDescription="@string/button_info"
+            app:srcCompat="@drawable/ic_paint_studio_save_info" />
+
+        <View
+            android:layout_width="111dp"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="3dp"
+            android:background="@color/paint_studio_main_drawing_surface_inactive" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/paint_studio_save_format_specific_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

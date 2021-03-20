@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+
+-->
+<resources>
+    <!-- paint_studio theme colors -->
+    <color name="paint_studio_colorPrimary">#4CAF50</color>
+    <color name="paint_studio_colorPrimaryDark">#009688</color>
+    <color name="paint_studio_colorAccent">#2196F3</color>
+    <color name="paint_studio_text_color_link">#E68B00</color>
+
+    <!-- paint_studio main activity -->
+    <color name="paint_studio_main_separator_color">#c8e8ff</color>
+    <color name="paint_studio_main_bottom_bar_selected">#007A99</color>
+    <color name="paint_studio_main_drawing_surface_active">#00000000</color>
+    <color name="paint_studio_main_drawing_surface_inactive">#80000000</color>
+    <color name="paint_studio_main_drawing_surface_background">#D3D3D3</color>
+    <color name="paint_studio_main_rectangle_tool_primary_color">#555555</color>
+    <color name="paint_studio_main_rectangle_tool_accent_color">#33B5E5</color>
+    <color name="paint_studio_main_rectangle_tool_highlight_color">#e56b33</color>
+    <color name="paint_studio_main_cursor_tool_inactive_primary_color">#555555</color>
+
+    <!-- paint_studio welcome activity -->
+    <color name="paint_studio_welcome_dot_active">#ffffffff</color>
+    <color name="paint_studio_welcome_dot_inactive">#64ffffff</color>
+    <!-- paint_studio Toggle Button -->
+    <color name="paint_studio_lighter_gray">#DFDADA</color>
+
+    <color name="paint_studio_color_picker_white">#FFFFFF</color>
+    <color name="paint_studio_color_picker_gray">#A59E9E</color>
+
+
+
+
+
+
+</resources>

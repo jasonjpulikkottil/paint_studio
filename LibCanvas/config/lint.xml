@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+
+<lint>
+    <issue id="UnusedResources">
+        <ignore regexp="res/values-(?!de).*/string.xml$" />
+    </issue>
+
+    <issue id="ExtraTranslation">
+        <ignore regexp="res/values-.*/string.xml$" />
+    </issue>
+
+    <issue id="MissingTranslation">
+        <ignore regexp="res/values/string.xml$" />
+    </issue>
+
+    <issue id="Untranslatable">
+        <ignore regexp="res/values-.*/string.xml$" />
+    </issue>
+
+    <issue id="ShowToast">
+        <ignore path="src/main/java/org/catrobat/PaintStudio/ui/ToastFactory.java" />
+    </issue>
+</lint>

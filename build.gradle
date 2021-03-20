@@ -1,0 +1,45 @@
+
+buildscript {
+    ext.kotlin_version = '1.4.21'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.3'
+        //canvas
+        classpath 'com.dicedmelon.gradle:jacoco-android:0.1.4'
+        classpath 'org.catrobat.gradle.androidemulators:android-emulators-gradle:1.6.2'
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:1.0.2'
+        classpath 'com.novoda:bintray-release:0.9.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.31"
+       //filter
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5'
+        classpath "com.github.dcendents:android-maven-gradle-plugin:2.1"
+        //tuner
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.3'
+    }
+}
+
+ext {
+    androidCompileSdkVersion = 30
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 30
+
+    androidSupportLibraryVersion = '28.0.0'
+
+    androidVersionCode = 1
+    androidVersionName = '1.0.0'
+}
+
+if(project.hasProperty("snapshot")) {
+    androidVersionName = androidVersionName + '-LOCAL'
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        google()
+        jcenter()
+    }
+}

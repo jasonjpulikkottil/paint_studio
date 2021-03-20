@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paint_studio_layer_side_nav_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/paint_studio_layer_side_nav_button_visibility"
+        style="?borderlessButtonStyle"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/layer_new"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_paint_studio_layers_visibility"
+        android:theme="@style/paint_studioHighlightColorTheme"
+        android:tint="@android:color/white" />
+
+
+    <ImageButton
+        android:id="@+id/paint_studio_layer_side_nav_button_add"
+        style="?borderlessButtonStyle"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-2dp"
+        android:layout_toEndOf="@+id/paint_studio_layer_side_nav_button_visibility"
+        android:contentDescription="@string/layer_new"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_paint_studio_layers_add_selector"
+        android:theme="@style/paint_studioHighlightColorTheme"
+        android:tint="@android:color/white" />
+
+    <ImageButton
+        android:id="@+id/paint_studio_layer_side_nav_button_delete"
+        style="?borderlessButtonStyle"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-1dp"
+        android:layout_toEndOf="@+id/paint_studio_layer_side_nav_button_add"
+        android:contentDescription="@string/layer_delete"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_paint_studio_layers_delete_selector"
+        android:theme="@style/paint_studioHighlightColorTheme"
+        android:tint="@android:color/white" />
+
+    <com.jdots.paint.ui.dragndrop.DragAndDropListView
+        android:id="@+id/paint_studio_layer_side_nav_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paint_studio_layer_side_nav_button_add"
+        android:splitMotionEvents="true"
+        tools:listitem="@layout/paint_studio_item_layer">
+
+    </com.jdots.paint.ui.dragndrop.DragAndDropListView>
+
+</RelativeLayout>

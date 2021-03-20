@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+
+-->
+<resources>
+    <!-- paint_studio MainActivity -->
+    <dimen name="paint_studio_main_bottom_bar_height">50dp</dimen>
+    <dimen name="paint_studio_bottom_navigation_icon_size">24dp</dimen>
+    <dimen name="paint_studio_main_top_bar_height">50dp</dimen>
+
+    <!-- paint_studio WelcomeActivity -->
+    <dimen name="paint_studio_welcome_dots_height">35dp</dimen>
+    <dimen name="paint_studio_welcome_navigation_height">40dp</dimen>
+    <dimen name="paint_studio_welcome_margin_side">50dp</dimen>
+    <dimen name="paint_studio_welcome_margin_top">100dp</dimen>
+    <dimen name="paint_studio_welcome_margin_top_possibilities">50dp</dimen>
+    <dimen name="paint_studio_welcome_margin_top_text">25dp</dimen>
+</resources>

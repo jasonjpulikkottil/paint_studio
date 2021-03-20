@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jdots.paint"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="30"/>
+
+    <application
+        android:largeHeap="true"
+        android:supportsRtl="true">
+        <provider
+            android:name="com.jdots.paint.MyProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"/>
+        </provider>
+
+        <activity
+            android:name="com.jdots.paint.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/paint_studioSplashTheme" />
+
+
+
+
+
+        <activity
+            android:name="com.jdots.paint.MainActivity"
+            android:theme="@style/paint_studioSplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
+                <category android:name="android.intent.category.ALTERNATIVE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+                <data android:scheme="file" />
+                <data android:host="*"/>
+                <data android:pathPattern=".*\\.ora" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.EDIT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+
+            </intent-filter>
+
+
+        </activity>
+    </application>
+</manifest>

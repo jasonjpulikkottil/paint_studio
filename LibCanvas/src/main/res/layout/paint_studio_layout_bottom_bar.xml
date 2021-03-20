@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paint_studio_tools_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:showIn="@layout/activity_paint_studio_main">
+
+    <TableRow
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+        <LinearLayout
+            android:id="@+id/paint_studio_tools_brush"
+            tools:ignore="UseCompoundDrawables"
+            style="@style/paint_studioToolSelectionButton">
+            <ImageView
+                style="@style/paint_studioToolSelectionButtonImageView"
+                app:srcCompat="@drawable/ic_paint_studio_tool_brush"
+                android:contentDescription="@string/button_brush"/>
+            <TextView
+                style="@style/paint_studioToolSelectionButtonTextView"
+                android:text="@string/button_brush"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paint_studio_tools_hand"
+            tools:ignore="UseCompoundDrawables"
+            style="@style/paint_studioToolSelectionButton">
+            <ImageView
+                style="@style/paint_studioToolSelectionButtonImageView"
+                app:srcCompat="@drawable/ic_paint_studio_tool_hand"
+                android:contentDescription="@string/button_hand"/>
+            <TextView
+                style="@style/paint_studioToolSelectionButtonTextView"
+                android:text="@string/button_hand"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paint_studio_tools_eraser"
+            tools:ignore="UseCompoundDrawables"
+            style="@style/paint_studioToolSelectionButton">
+            <ImageView
+                style="@style/paint_studioToolSelectionButtonImageView"
+                app:srcCompat="@drawable/ic_paint_studio_tool_eraser"
+                android:contentDescription="@string/button_eraser"/>
+            <TextView
+                style="@style/paint_studioToolSelectionButtonTextView"
+                android:text="@string/button_eraser"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paint_studio_tools_line"
+            tools:ignore="UseCompoundDrawables"
+            style="@style/paint_studioToolSelectionButton">
+            <ImageView
+                style="@style/paint_studioToolSelectionButtonImageView"
+                app:srcCompat="@drawable/ic_paint_studio_tool_line"
+                android:contentDescription="@string/button_line"/>
+            <TextView
+                style="@style/paint_studioToolSelectionButtonTextView"
+                android:text="@string/button_line"/>
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+        <LinearLayout
+            android:id="@+id/paint_studio_tools_rectangle"
+            tools:ignore="UseCompoundDrawables"
+            style="@style/paint_studioToolSelectionButton">
+            <ImageView
+                style="@style/paint_studioToolSelectionButtonImageView"
+                app:srcCompat="@drawable/ic_paint_studio_tool_rectangle"
+                android:contentDescription="@string/button_shape"/>
+            <TextView
+                style="@style/paint_studioToolSelectionButtonTextView"
+                android:text="@string/button_shape"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paint_studio_tools_fill"
+            tools:ignore="UseCompoundDrawables"
+            style="@style/paint_studioToolSelectionButton">
+            <ImageView
+                style="@style/paint_studioToolSelectionButtonImageView"
+                app:srcCompat="@drawable/ic_paint_studio_tool_fill"
+                android:contentDescription="@string/button_fill"/>
+            <TextView
+                style="@style/paint_studioToolSelectionButtonTextView"
+                android:text="@string/button_fill"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paint_studio_tools_spray_can"
+            tools:ignore="UseCompoundDrawables"
+            style="@style/paint_studioToolSelectionButton">
+            <ImageView
+                style="@style/paint_studioToolSelectionButtonImageView"
+                app:srcCompat="@drawable/ic_paint_studio_tool_spray_can"
+                android:contentDescription="@string/button_spray_can"/>
+            <TextView
+                style="@style/paint_studioToolSelectionButtonTextView"
+                android:text="@string/button_spray_can"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paint_studio_tools_cursor"
+            tools:ignore="UseCompoundDrawables"
+            style="@style/paint_studioToolSelectionButton">
+            <ImageView
+                style="@style/paint_studioToolSelectionButtonImageView"
+                app:srcCompat="@drawable/ic_paint_studio_tool_cursor"
+                android:contentDescription="@string/button_cursor"/>
+            <TextView
+                style="@style/paint_studioToolSelectionButtonTextView"
+                android:text="@string/button_cursor"/>
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+        <LinearLayout
+            android:id="@+id/paint_studio_tools_text"
+            tools:ignore="UseCompoundDrawables"
+            style="@style/paint_studioToolSelectionButton">
+            <ImageView
+                style="@style/paint_studioToolSelectionButtonImageView"
+                app:srcCompat="@drawable/ic_paint_studio_tool_text"
+                android:contentDescription="@string/button_text"/>
+            <TextView
+                style="@style/paint_studioToolSelectionButtonTextView"
+                android:text="@string/button_text"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paint_studio_tools_stamp"
+            tools:ignore="UseCompoundDrawables"
+            style="@style/paint_studioToolSelectionButton">
+            <ImageView
+                style="@style/paint_studioToolSelectionButtonImageView"
+                app:srcCompat="@drawable/ic_paint_studio_tool_stamp"
+                android:contentDescription="@string/button_stamp"/>
+            <TextView
+                style="@style/paint_studioToolSelectionButtonTextView"
+                android:text="@string/button_stamp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paint_studio_tools_transform"
+            tools:ignore="UseCompoundDrawables"
+            style="@style/paint_studioToolSelectionButton">
+            <ImageView
+                style="@style/paint_studioToolSelectionButtonImageView"
+                app:srcCompat="@drawable/ic_paint_studio_tool_transform"
+                android:contentDescription="@string/button_transform"/>
+            <TextView
+                style="@style/paint_studioToolSelectionButtonTextView"
+                android:text="@string/button_transform"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paint_studio_tools_import"
+            tools:ignore="UseCompoundDrawables"
+            style="@style/paint_studioToolSelectionButton">
+            <ImageView
+                style="@style/paint_studioToolSelectionButtonImageView"
+                app:srcCompat="@drawable/ic_paint_studio_tool_import"
+                android:contentDescription="@string/button_import_image"/>
+            <TextView
+                style="@style/paint_studioToolSelectionButtonTextView"
+                android:text="@string/button_import_image" />
+        </LinearLayout>
+    </TableRow>
+</TableLayout>

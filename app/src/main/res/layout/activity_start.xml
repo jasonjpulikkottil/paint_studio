@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paint_1"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <com.github.nikartm.button.FitButton
+                android:id="@+id/buttonCanvas"
+                android:layout_width="164dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:foregroundGravity="center"
+                android:gravity="center_vertical"
+                android:textAlignment="inherit"
+                app:fb_borderColor="@color/paint_studio_colorAccent"
+                app:fb_borderWidth="2dp"
+                app:fb_cornerRadius="7dp"
+                app:fb_iconHeight="24dp"
+                app:fb_iconMarginStart="12dp"
+                app:fb_iconPosition="left"
+                app:fb_iconWidth="24dp"
+                app:fb_shape="rectangle"
+                app:fb_text="CANVAS"
+                app:fb_textColor="@color/paint_studio_colorAccent"
+                app:fb_textPaddingStart="12dp" />
+
+            <com.github.nikartm.button.FitButton
+                android:id="@+id/buttonEdit"
+                android:layout_width="164dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:foregroundGravity="center"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                app:fb_borderColor="@color/paint_studio_colorAccent"
+                app:fb_borderWidth="2dp"
+                app:fb_cornerRadius="7dp"
+                app:fb_iconHeight="24dp"
+                app:fb_iconMarginStart="12dp"
+                app:fb_iconPosition="left"
+                app:fb_iconWidth="24dp"
+                app:fb_shape="rectangle"
+                app:fb_text="EDIT"
+                app:fb_textColor="@color/paint_studio_colorAccent"
+                app:fb_textPaddingStart="12dp" />
+
+            <com.github.nikartm.button.FitButton
+                android:id="@+id/buttonTune"
+                android:layout_width="164dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:foregroundGravity="center"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:visibility="visible"
+                app:fb_borderColor="@color/paint_studio_colorAccent"
+                app:fb_borderWidth="2dp"
+                app:fb_cornerRadius="7dp"
+                app:fb_iconHeight="24dp"
+                app:fb_iconMarginStart="12dp"
+                app:fb_iconPosition="left"
+                app:fb_iconWidth="24dp"
+                app:fb_shape="rectangle"
+                app:fb_text="TUNE"
+                app:fb_textColor="@color/paint_studio_colorAccent"
+                app:fb_textPaddingStart="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

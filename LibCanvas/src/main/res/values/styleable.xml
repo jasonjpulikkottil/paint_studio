@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<resources>
+    <!-- paint_studio -->
+    <declare-styleable name="paint_studioWelcomeAttributes" >
+        <attr name="android:textColor" />
+        <attr name="android:fontFamily" />
+        <attr name="android:textSize" />
+        <attr name="android:textStyle"/>
+    </declare-styleable>
+</resources>

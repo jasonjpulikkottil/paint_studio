@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/paint_studio_drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/paint_studio_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/paint_studio_layout_top_bar"
+            layout="@layout/paint_studio_layout_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/paint_studio_main_top_bar_height"
+            android:layout_alignParentTop="true" />
+
+        <com.jdots.paint.ui.DrawingSurface
+            android:id="@+id/paint_studio_drawing_surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_above="@+id/paint_studio_main_bottom_navigation"
+            android:layout_below="@+id/paint_studio_layout_top_bar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/paint_studio_main_drawing_surface_active" />
+
+
+        <include layout="@layout/paint_studio_layout_tool_options"
+            android:id="@+id/paint_studio_main_tool_options"/>
+
+        <LinearLayout
+            android:id="@+id/paint_studio_main_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/paint_studio_main_bottom_navigation"
+            android:background="@android:color/background_light"
+            android:visibility="gone">
+
+            <include layout="@layout/paint_studio_layout_bottom_bar"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paint_studio_main_bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/paint_studio_main_bottom_bar_height"
+            android:background="?attr/colorPrimary"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <include layout="@layout/paint_studio_layout_bottom_navigation"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/paint_studio_nav_view_layer"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center">
+
+        <include layout="@layout/paint_studio_layout_main_menu_layer" />
+    </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

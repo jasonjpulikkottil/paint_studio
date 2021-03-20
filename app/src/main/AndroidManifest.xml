@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jdots.paint.app" >
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="false"
+        android:extractNativeLibs="false"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="@string/app_name"
+        tools:ignore="GoogleAppIndexingWarning,UnusedAttribute"
+        android:name="androidx.multidex.MultiDexApplication">
+        <activity android:name="com.jdots.paint.app.StartActivity"
+
+            android:theme="@style/AppTheme.NoActionBar"
+
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+
+
+        <activity android:name="com.jdots.paint.MainActivity">
+
+        </activity>
+
+
+    <activity android:name="com.jdots.filter.EditImageActivity"
+        android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+
+
+        <activity
+            android:name="com.jdots.tuner.TuneActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+
+        <activity
+            android:name="com.karumi.dexter.DexterActivity"
+            android:theme="@style/Dexter.Internal.Theme.Transparent"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/paint_studio_item_layer_background"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/paint_studio_attribute_button_selector"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="5dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="5dp"
+    android:paddingBottom="10dp"
+    android:descendantFocusability="blocksDescendants" >
+
+    <CheckBox
+        android:id="@+id/paint_studio_checkbox_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:translationX="3dp"
+        android:checked="true"/>
+
+    <ImageView
+        android:id="@+id/paint_studio_item_layer_image"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="false"
+        android:background="@drawable/paint_studio_checkeredbg_repeat"
+        android:contentDescription="@string/layer_background"
+        android:scaleType="fitXY"
+        android:translationX="20dp"
+        android:focusable="false" />
+</LinearLayout>

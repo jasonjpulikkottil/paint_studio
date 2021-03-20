@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/paint_studio_welcome_margin_side"
+    android:paddingStart="@dimen/paint_studio_welcome_margin_side"
+    android:paddingTop="@dimen/paint_studio_welcome_margin_top">
+
+    <TextView
+        android:id="@+id/paint_studio_intro_welcome_head"
+        style="@style/paint_studioWelcomeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="2"
+        android:text="@string/welcome_to_pocket_paint" />
+
+    <TextView
+        android:id="@+id/paint_studio_intro_welcome_text"
+        style="@style/paint_studioWelcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paint_studio_intro_welcome_head"
+        android:layout_marginTop="@dimen/paint_studio_welcome_margin_top_text"
+        android:text="@string/intro_welcome_text" />
+
+</RelativeLayout>

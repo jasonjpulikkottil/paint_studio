@@ -1,0 +1,80 @@
+
+apply plugin: 'com.android.application'
+
+ext {
+    appId = 'com.jdots.paint'
+    appName = '@string/app_name'
+}
+
+// When -Pindependent was provided on the gradle command the APP name is changed.
+// This allows to have multiple paintstudio versions installed in parallel for testing purposes.
+// Furthermore these installations do not interfere with the actual paintstudio app.
+if (project.hasProperty('independent')) {
+    def today = new Date()
+    appId += '.independent_' + today.format('YYYYMMdd_HHmm')
+    appName = property('independent') ?: 'Paint ' + today.format('MMdd HH:mm')
+}
+
+if (!project.hasProperty("signingKeystore")) {
+    ext.signingKeystore = "dummyKeystore"
+}
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    compileSdkVersion rootProject.ext.androidCompileSdkVersion
+    defaultConfig {
+        applicationId appId
+        minSdkVersion rootProject.ext.androidMinSdkVersion
+        //noinspection OldTargetApi
+        targetSdkVersion rootProject.ext.androidTargetSdkVersion
+        versionCode rootProject.ext.androidVersionCode
+        versionName rootProject.ext.androidVersionName
+        manifestPlaceholders += [appName: appName]
+        setProperty("archivesBaseName", "paintstudio")
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        signedRelease {
+            storeFile file(project.property("signingKeystore"))
+            storePassword ""
+            keyAlias ""
+            keyPassword ""
+        }
+    }
+
+    if (project.hasProperty("signingKeystore") && project.hasProperty("signingKeystorePassword") &&
+            project.hasProperty("signingKeyAlias") && project.hasProperty("signingKeyPassword")) {
+        android.signingConfigs.signedRelease.storePassword = project.property("signingKeystorePassword")
+        android.signingConfigs.signedRelease.keyAlias = project.property("signingKeyAlias")
+        android.signingConfigs.signedRelease.keyPassword = project.property("signingKeyPassword")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        signedRelease.initWith(buildTypes.release)
+        signedRelease {
+            signingConfig signingConfigs.signedRelease
+        }
+    }
+}
+
+dependencies {
+    implementation project(':LibCanvas')
+    implementation project(':LibFilter')
+    implementation project(':LibTuner')
+
+
+    implementation 'com.karumi:dexter:6.2.2'
+    implementation "androidx.multidex:multidex:2.0.1"
+    implementation "com.github.nikartm:fit-button:1.2.1"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+}
